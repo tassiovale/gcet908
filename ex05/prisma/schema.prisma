@@ -1,0 +1,89 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Genero {
+  id     Int     @id @default(autoincrement())
+  nome   String  @unique @db.VarChar(60)
+  livros Livro[]
+
+  @@map("generos")
+}
+
+model Autor {
+  id            Int     @id @default(autoincrement())
+  nome          String  @db.VarChar(120)
+  anoNascimento Int?    @map("ano_nascimento")
+  livros        LivroAutor[]
+
+  @@map("autores")
+}
+
+model Livro {
+  id           Int      @id @default(autoincrement())
+  titulo       String   @db.VarChar(200)
+  isbn         String?  @unique @db.VarChar(20)
+  ano          Int?
+  exemplares   Int      @default(1)
+  generoId     Int?     @map("genero_id")
+  criadoEm     DateTime @default(now())     @map("criado_em")
+  atualizadoEm DateTime @updatedAt          @map("atualizado_em")
+
+  genero      Genero?      @relation(fields: [generoId], references: [id])
+  autores     LivroAutor[]
+  emprestimos Emprestimo[]
+
+  @@index([titulo])
+  @@map("livros")
+}
+
+model LivroAutor {
+  livroId Int @map("livro_id")
+  autorId Int @map("autor_id")
+
+  livro Livro @relation(fields: [livroId], references: [id], onDelete: Cascade)
+  autor Autor @relation(fields: [autorId], references: [id], onDelete: Cascade)
+
+  @@id([livroId, autorId])
+  @@map("livros_autores")
+}
+
+model Estudante {
+  id        Int     @id @default(autoincrement())
+  nome      String  @db.VarChar(120)
+  matricula String  @unique @db.VarChar(20)
+  email     String? @unique @db.VarChar(160)
+  ativo     Boolean @default(true)
+
+  emprestimos Emprestimo[]
+
+  @@map("estudantes")
+}
+
+model Emprestimo {
+  id            Int       @id @default(autoincrement())
+  livroId       Int       @map("livro_id")
+  estudanteId   Int       @map("estudante_id")
+  dataRetirada  DateTime  @default(now()) @map("data_retirada")
+  dataPrevista  DateTime  @map("data_prevista")
+  dataDevolucao DateTime? @map("data_devolucao")
+
+  status String @default("ativo") @db.VarChar(20)
+
+  livro     Livro     @relation(fields: [livroId], references: [id])
+  estudante Estudante @relation(fields: [estudanteId], references: [id])
+
+  @@index([estudanteId, dataDevolucao])
+  @@map("emprestimos")
+}
