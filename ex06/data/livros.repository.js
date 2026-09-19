@@ -1,5 +1,4 @@
-import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
+import { prisma } from "./prisma.js";
 
 export const livrosRepository = {
     async listar({ genero, titulo, pagina = 1, limite = 10, ordenar = 'titulo', direcao = 'asc' }) {
