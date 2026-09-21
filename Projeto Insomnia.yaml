@@ -1,0 +1,661 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: GCET908
+meta:
+  id: wrk_scratchpad
+  created: 1787528846882
+  modified: 1789994159762
+  description: ""
+collection:
+  - name: GCET908
+    meta:
+      id: fld_8901278298d842f782cdc922497aaeee
+      created: 1787528960865
+      modified: 1787528960865
+      sortKey: -1787528960865
+      description: ""
+    children:
+      - name: ex01
+        meta:
+          id: fld_014e353948684c5fae810be048a76187
+          created: 1787528970670
+          modified: 1787960114649
+          sortKey: -1787529217876
+          description: ""
+        children:
+          - url: http://localhost:3000
+            name: Hello World
+            meta:
+              id: req_d0b49d102a094756ba90138851dcfcc1
+              created: 1787528979624
+              modified: 1787529029207
+              isPrivate: false
+              description: ""
+              sortKey: -1787528979624
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: ex02
+        meta:
+          id: fld_aa2c4983d70843b4a76ced01d932c95a
+          created: 1787529217776
+          modified: 1787529217776
+          sortKey: -1787529217776
+          description: ""
+        children:
+          - url: http://localhost:3000/livros
+            name: Listar todos os livros
+            meta:
+              id: req_daa4fedf0d6d4e199bd1642a2ec54282
+              created: 1787529675846
+              modified: 1787529754683
+              isPrivate: false
+              description: ""
+              sortKey: -1787529675846
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/2
+            name: Listar livro por id
+            meta:
+              id: req_ea59392240314b0a88cfd0a0b9da8662
+              created: 1787530132014
+              modified: 1787530267691
+              isPrivate: false
+              description: ""
+              sortKey: -1787529327735
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros
+            name: Criar livro
+            meta:
+              id: req_f706c0471cf040148b8220895c777b27
+              created: 1787530483120
+              modified: 1787530873413
+              isPrivate: false
+              description: ""
+              sortKey: -1787529501790.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"titulo": "Desenvolvimento de Software II",
+                	"autor": "Tassio Valle",
+                	"ano": 2026
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/3
+            name: Remover livro por id
+            meta:
+              id: req_5137fd29ceaf4b86bdb9a2aeadccb9d7
+              created: 1787530869317
+              modified: 1787530895176
+              isPrivate: false
+              description: ""
+              sortKey: -1787529240707.25
+            method: DELETE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: ex03
+        meta:
+          id: fld_796b666a03f5454ebb05243a3c02f580
+          created: 1787960085124
+          modified: 1787960085124
+          sortKey: -1787529094223
+          description: ""
+        children:
+          - url: http://localhost:3000/livros/3
+            name: Listar livro por id
+            meta:
+              id: req_0e192d71f28444aa8d4032465183c585
+              created: 1787960085124
+              modified: 1787963051889
+              isPrivate: false
+              description: ""
+              sortKey: -1787529327735
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/3
+            name: Remover livro por id
+            meta:
+              id: req_18975d0d06ce4d6a86560225056a4993
+              created: 1787960085124
+              modified: 1788476233512
+              isPrivate: false
+              description: ""
+              sortKey: -1787529240707.25
+            method: DELETE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros
+            name: Criar livro
+            meta:
+              id: req_2616e1b238a44a61bd428b8eb1c18245
+              created: 1787960085124
+              modified: 1788476105812
+              isPrivate: false
+              description: ""
+              sortKey: -1787529501790.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"titulo": "Livro Teste",
+                	"autor": "Desconhecido",
+                	"ano": 2026
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros
+            name: Listar todos os livros
+            meta:
+              id: req_8161d2b833934dcf94c8061236640822
+              created: 1787960085124
+              modified: 1788476004656
+              isPrivate: false
+              description: ""
+              sortKey: -1787529675846
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/3
+            name: Atualizar livro
+            meta:
+              id: req_4b1f47a60e464085ba953f34ddde2636
+              created: 1787960828295
+              modified: 1788476189866
+              isPrivate: false
+              description: ""
+              sortKey: -1787529414762.75
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"titulo": "Teste",
+                	"autor": "Fulano",
+                	"ano": 2025
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: ex04
+        meta:
+          id: fld_574e46785d614157a4c35b3e55ff6cb1
+          created: 1788811358121
+          modified: 1788811358121
+          sortKey: -1787529027544
+          description: ""
+        children:
+          - url: http://localhost:3000/livros?limite=2&pagina=1&nome=qui
+            name: Buscar livros
+            meta:
+              id: req_104fa0bc5a75427e926b56a6b08fd0b1
+              created: 1788811358121
+              modified: 1788814016568
+              isPrivate: false
+              description: ""
+              sortKey: -1787529675846
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/33
+            name: Listar livro por id
+            meta:
+              id: req_2b4046fbdb484f408fb107b382c1b102
+              created: 1788811358121
+              modified: 1788814756507
+              isPrivate: false
+              description: ""
+              sortKey: -1787529327735
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros
+            name: Criar livro
+            meta:
+              id: req_ba0ebf67ab9e483ead1b32a2814f6a57
+              created: 1788811358121
+              modified: 1788814676578
+              isPrivate: false
+              description: ""
+              sortKey: -1787529501790.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"titulo": "Livro Teste",
+                	"isbn": "12876",
+                	"ano": 2026,
+                	"genero_id": 3
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/33
+            name: Remover livro por id
+            meta:
+              id: req_f56494f26eed4a6fa52ac36debfc0514
+              created: 1788811358121
+              modified: 1788814746531
+              isPrivate: false
+              description: ""
+              sortKey: -1787529240707.25
+            method: DELETE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/33
+            name: Atualizar livro
+            meta:
+              id: req_fe7c4cdeaf3c4bd1bed5ff7c3d9982ee
+              created: 1788811358121
+              modified: 1788814738481
+              isPrivate: false
+              description: ""
+              sortKey: -1787529414762.75
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"titulo": "Livro Teste atualizado",
+                	"isbn": "111111",
+                	"ano": 2026,
+                	"genero_id": 3
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: ex05
+        meta:
+          id: fld_a79f48253dcc431cab26611502694f5b
+          created: 1789159103935
+          modified: 1789159103935
+          sortKey: -1787528994204.5
+          description: ""
+        children:
+          - url: http://localhost:3000/livros/33
+            name: Listar livro por id
+            meta:
+              id: req_1447c7241fe54528bb4dc2c346f65157
+              created: 1789159103935
+              modified: 1789159103935
+              isPrivate: false
+              description: ""
+              sortKey: -1787529327735
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros
+            name: Criar livro
+            meta:
+              id: req_30fc7261e22f4bf68005085db13e983d
+              created: 1789159103935
+              modified: 1789159103935
+              isPrivate: false
+              description: ""
+              sortKey: -1787529501790.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"titulo": "Livro Teste",
+                	"isbn": "12876",
+                	"ano": 2026,
+                	"genero_id": 3
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros?limite=10&pagina=1
+            name: Buscar livros
+            meta:
+              id: req_8b311923c3c94547878ac26e57df9326
+              created: 1789159103935
+              modified: 1789159238466
+              isPrivate: false
+              description: ""
+              sortKey: -1787529675846
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/33
+            name: Remover livro por id
+            meta:
+              id: req_9c0173c1f51e488bbffe3754972a19f6
+              created: 1789159103935
+              modified: 1789159103935
+              isPrivate: false
+              description: ""
+              sortKey: -1787529240707.25
+            method: DELETE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/33
+            name: Atualizar livro
+            meta:
+              id: req_bc4d5a22cbce463e9b5f02812a004c0d
+              created: 1789159103935
+              modified: 1789159103935
+              isPrivate: false
+              description: ""
+              sortKey: -1787529414762.75
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"titulo": "Livro Teste atualizado",
+                	"isbn": "111111",
+                	"ano": 2026,
+                	"genero_id": 3
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: ex06
+        meta:
+          id: fld_cab80b4e30ae430083fce536bd0a6301
+          created: 1789855474917
+          modified: 1789855474917
+          sortKey: -1787528977534.75
+          description: ""
+        children:
+          - url: http://localhost:3000/livros/33
+            name: Atualizar livro
+            meta:
+              id: req_48c7a7e77404440ba5681b9f5702543b
+              created: 1789855474917
+              modified: 1789855474917
+              isPrivate: false
+              description: ""
+              sortKey: -1787529414762.75
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"titulo": "Livro Teste atualizado",
+                	"isbn": "111111",
+                	"ano": 2026,
+                	"genero_id": 3
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros
+            name: Criar livro
+            meta:
+              id: req_5a04c5c1933b4281bf060b467c587e72
+              created: 1789855474917
+              modified: 1789855474917
+              isPrivate: false
+              description: ""
+              sortKey: -1787529501790.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"titulo": "Livro Teste",
+                	"isbn": "12876",
+                	"ano": 2026,
+                	"genero_id": 3
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/33
+            name: Listar livro por id
+            meta:
+              id: req_9fba440684184342a654106c52694c4c
+              created: 1789855474917
+              modified: 1789855474917
+              isPrivate: false
+              description: ""
+              sortKey: -1787529327735
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros/33
+            name: Remover livro por id
+            meta:
+              id: req_a2c5351a5c564140929da728f66d4a0f
+              created: 1789855474917
+              modified: 1789855474917
+              isPrivate: false
+              description: ""
+              sortKey: -1787529240707.25
+            method: DELETE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/livros?limite=10&pagina=1
+            name: Buscar livros
+            meta:
+              id: req_d332fb8e6dc84449b48535b4336afd7c
+              created: 1789855474917
+              modified: 1789855474917
+              isPrivate: false
+              description: ""
+              sortKey: -1787529675846
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/emprestimos
+            name: Criar empréstimo
+            meta:
+              id: req_a0c00ffddd2a4b0199e0f427af3a944c
+              created: 1789858124175
+              modified: 1789860796983
+              isPrivate: false
+              description: ""
+              sortKey: -1787529240607.25
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"estudanteId": 6,
+                	"livroId": 8
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1787528928664
+    modified: 1787528928664
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1787528928662
+    modified: 1787528928662
+    isPrivate: false

@@ -15,17 +15,18 @@ export const emprestimosRepository = {
             } 
         });
     },
-    registrarComBaixa: async ({ livroId, estudanteId, dataPrevista }) => {
+    registrarComBaixa: async (emprestimo) => {
+        const { livro, estudante, dataPrevista } = emprestimo;
         return prisma.$transaction(async (transacao) => {
             const baixa = await transacao.livro.updateMany({
-                where: { id: livroId, exemplares: { gt: 0 } }, // greater than 0
+                where: { id: livro.id, exemplares: { gt: 0 } }, // greater than 0
                 data: { exemplares: { decrement: 1 } } // decrement by 1
             });
 
             if (baixa.count === 0) return null; // No book available for loan
 
             return transacao.emprestimo.create({
-                data: { livroId, estudanteId, dataPrevista },
+                data: { livroId: livro.id, estudanteId: estudante.id, dataPrevista },
                 include: {
                     livro: { 
                         select: { 
